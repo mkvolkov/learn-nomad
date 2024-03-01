@@ -1,4 +1,4 @@
-job "httpconsul" {
+job "httpfabio" {
     datacenters = ["dc1"]
 
     group "echo" {
@@ -22,8 +22,13 @@ job "httpconsul" {
             }
 
             service {
-                name = "httpconsul"
+                name = "httpfabio"
                 port = "http"
+
+                tags = [
+                    "urlprefix-/httpfabio",
+                ]
+
                 check {
                     type = "http"
                     path = "/health"
