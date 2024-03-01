@@ -1,4 +1,4 @@
-job "http-echo-dyn" {
+job "httpdyn" {
     datacenters = ["dc1"]
 
     group "echo" {
